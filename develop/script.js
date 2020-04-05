@@ -13,27 +13,23 @@ $(document).ready(function(){
 //On click save data to local storage to persist. 
 $("button").on("click", function(event){
     //value for the value of argument
-    var value = $(this).siblings("input").val().trim();
+    var value = $(this).siblings("input").val().trim()
 ​   // value for key for the argument
-    var key = $(this).parent().data("hour");
+    var key = $(this).parent().data("hour")
 ​   //The setting to local storage of the Key value pair
-    localStorage.setItem(key, value);
-​
+    localStorage.setItem(key, value)
 })
 
-
+//each loop for setting the local storage to the timeblocks and compare below
 $(".item").each(function(){
-    ​
+    ​   //current hour from moment.js to compare
         var hour = $(this).data("hour")
-
-        var currentHour = time.hour();
-    ​
-        var data = localStorage.getItem(hour);
-    ​
-        console.log(hour, data);
-    
+        //pulling hour from moment.js to compare
+        var currentHour = time.hour()
+    ​   //pulling local storage hour 
+        var data = localStorage.getItem(hour)
         $(this).children("input").val(data)
-        ​// -> compare time block againts current time with Moment.js
+        ​//compare time block againts current time with Moment.js
         ​ //condition for past event update class to have BG of RED
             if(hour < currentHour){
                 $(this).addClass("past")
@@ -54,18 +50,7 @@ $(".item").each(function(){
         ​
         })
 
-//     *text area for time and activity
-//         -> collect user information
-//         -> form element? which one?
-//     *save button
-//         -> stores the activity in local storage
-//           -> stores *EACH* activity in local storage
-//           -> how can I make sure iI does'nt overwrite what's already in there?
 
-//         -> store the time in local storage --- JSONStringify  
-//             * save needs to go to the correct hour/slot
-
-// display time blocks back to fields --- JSONParse
 
 
 
