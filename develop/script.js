@@ -4,17 +4,56 @@ console.log("app.js loaded");
 $(document).ready(function(){
 
 
-// create var for current hour
-let currentHour = moment().hour(Number);
-console.log(currentHour);
- //create a moment object of current day and time. 
- const m = moment();
- // convert the moment object to show in string, target the node and update to current day and time.
- $("#currentDay").text(m.toString());
-// HTML Nodes 
 
-//  ->timeblocks have three pieces
-     
+ //create a moment object of current day and time. 
+ let time = moment();
+ // convert the moment object to show in string, target the node and update to current day and time.
+ $("#currentDay").text(time.format("dddd MMMM Do YYYY"));
+
+//On click save data to local storage to persist. 
+$("button").on("click", function(event){
+    //value for the value of argument
+    var value = $(this).siblings("input").val().trim();
+​   // value for key for the argument
+    var key = $(this).parent().data("hour");
+​   //The setting to local storage of the Key value pair
+    localStorage.setItem(key, value);
+​
+})
+
+
+$(".item").each(function(){
+    ​
+        var hour = $(this).data("hour")
+
+        var currentHour = time.hour();
+    ​
+        var data = localStorage.getItem(hour);
+    ​
+        console.log(hour, data);
+    
+        $(this).children("input").val(data)
+        ​// -> compare time block againts current time with Moment.js
+        ​ //condition for past event update class to have BG of RED
+            if(hour < currentHour){
+                $(this).addClass("past")
+            }
+         //condition for present event update class to have BG of Green
+   
+            if(hour == currentHour){
+                $(this).addClass("present")
+            }
+           //condition for present event update class to have BG of Green
+ 
+            if(hour > currentHour){
+                $(this).addClass("future")
+            }
+        })
+        ​
+        ​
+        ​
+        })
+
 //     *text area for time and activity
 //         -> collect user information
 //         -> form element? which one?
@@ -28,12 +67,7 @@ console.log(currentHour);
 
 // display time blocks back to fields --- JSONParse
 
-// color code the activity
-// -> get the current time
-// -> compare time block againts current time ---- Moment.js
-//     *condition for past event update class to have BG of RED
-//     *condition for present event update class to have BG of Green
-//     *condition for future event update class to have BG of Light Grey
+
 
 // ON REFRESH 
 // -> time blocks should populate with local storage data
@@ -51,4 +85,3 @@ console.log(currentHour);
 
 
 //End of the document ready jQuery function
-})
