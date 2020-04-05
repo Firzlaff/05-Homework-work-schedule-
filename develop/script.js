@@ -1,9 +1,21 @@
+//Test that the js is linked and working
+console.log("app.js loaded");
+// document.ready function to ensure HTML loaded first 
+$(document).ready(function(){
+
+
+// create var for current hour
+let currentHour = moment().hour(Number);
+console.log(currentHour);
+ //create a moment object of current day and time. 
+ const m = moment();
+ // convert the moment object to show in string, target the node and update to current day and time.
+ $("#currentDay").text(m.toString());
 // HTML Nodes 
 
-// create time blocks
-//  ->timeblock has three pieces
+//  ->timeblocks have three pieces
      
-//     *text atea f*timor activity
+//     *text area for time and activity
 //         -> collect user information
 //         -> form element? which one?
 //     *save button
@@ -11,17 +23,17 @@
 //           -> stores *EACH* activity in local storage
 //           -> how can I make sure iI does'nt overwrite what's already in there?
 
-//         -> store the time in local storage  -- JSONStringify  and JSONParse
+//         -> store the time in local storage --- JSONStringify  
 //             * save needs to go to the correct hour/slot
 
-// display time blocks
+// display time blocks back to fields --- JSONParse
 
 // color code the activity
 // -> get the current time
-// -> compare time block againts current time -- ??? Moment.js
-//     *condition for past event update class to have BG or RED
-//     *condition for present event update class to have BG or Green
-//     *condition for future event update class to have BG or Light Grey
+// -> compare time block againts current time ---- Moment.js
+//     *condition for past event update class to have BG of RED
+//     *condition for present event update class to have BG of Green
+//     *condition for future event update class to have BG of Light Grey
 
 // ON REFRESH 
 // -> time blocks should populate with local storage data
@@ -36,3 +48,7 @@
 //       STARTING WITH GETTING THE CODE TO SAVE FOR ONE FIELD FIRST.
 
 //       treat local storage like its its own JS Object 
+
+
+//End of the document ready jQuery function
+})

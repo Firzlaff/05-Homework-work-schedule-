@@ -20,6 +20,17 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
+
+    <style>
+      .past {background : red
+      }
+      .present {background : green
+      }
+      .future {background : lightgray
+      }
+
+
+    </style>
   </head>
 
   <body>
@@ -31,60 +42,68 @@
     <div class="container">
 <!-- Timeblocks go here -->
 <!-- I feel i should create all the blocks here for easier input forms-->
-      <form id="hour1" method="POST">
-        <label for="time-block">9AM:</label>
-        <input type="text" placeholder="" name="9AMTimeBlock" id="input9AM" />
+      <div>
+        <time id="time1" data-hour=9>9AM</time>
+        <input type="text" name="9AMTimeBlock" id="input9AM" size="75" />
         <button>Save</button>
-      </form>
-      <form id="hour2" method="POST">
-        <label for="time-block">10AM:</label>
-        <input type="text" placeholder="" name="10AMTimeBlock" id="input10AM" />
+      </div>
+
+      <div>
+        <time id="time2" data-hour=10>10AM</time>
+        <input type="text" name="10AMTimeBlock" id="input10AM" size="75" />
         <button>Save</button>
-      </form>
-      <form id="hour3" method="POST">
-        <label for="time-block">11AM:</label>
-        <input type="text" placeholder="" name="11AMTimeBlock" id="input11AM" />
+      </div>
+
+      <div>
+        <time id="time3" data-hour=11>11AM</time>
+        <input type="text" name="11AMTimeBlock" id="input11AM" size="75" />
         <button>Save</button>
-      </form>
-      <form id="hour4" method="POST">
-        <label for="time-block">12PM:</label>
-        <input type="text" placeholder="" name="12PMTimeBlock" id="input12PM" />
+      </div>
+
+      <div>
+        <time id="time4">12PM</time>
+        <input type="text" name="12PMTimeBlock" id="input12PM" size="75" />
         <button>Save</button>
-      </form>
-      <form id="hour5" method="POST">
-        <label for="time-block">1PM:</label>
-        <input type="text" placeholder="" name="1PMTimeBlock" id="input1PM" />
+    </div>
+
+    <div>
+        <time id="time5">1PM</time>
+        <input type="text" name="1PMTimeBlock" id="input1PM" size="75" />
         <button>Save</button>
-      </form>
-      <form id="hour6" method="POST">
-        <label for="time-block">2PM:</label>
-        <input type="text" placeholder="" name="2PMTimeBlock" id="input2PM" />
+      </div>
+
+      <div>
+        <time id="time6">2PM</time>
+        <input type="text" name="2PMTimeBlock" id="input2PM" size="75" />
         <button>Save</button>
-      </form>
-      <form id="hour7" method="POST">
-        <label for="time-block">3PM:</label>
-        <input type="text" placeholder="" name="3PMTimeBlock" id="input3PM" />
+      </div>
+
+      <div>
+        <time id="time7">3PM</time>
+        <input type="text" name="3PMTimeBlock" id="input3PM" size="75" />
         <button>Save</button>
-      </form>
-      <form id="hour8" method="POST">
-        <label for="time-block">4PM:</label>
-        <input type="text" placeholder="" name="4PMTimeBlock" id="input4PM" />
+      </div>
+
+      <div>
+        <time id="time8">4PM</time>
+        <input type="text" name="4PMTimeBlock" id="input4PM" size="75" />
         <button>Save</button>
-      </form>
+      </div>
+
     </div>
     <!--scripts for JS Moment Jquery CloudFlare-->
-    <script href="script.js"></script>
+    <script src="script.js"></script>
     <script src="Lib/moment/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   
 
     <script type="text/javaScript">
-    //create a moment object of current day and time. 
-      const m = moment();
-      // convert the moment object to show string target the node for the day and update to reflect current info
-      $("#currentDay").text(m.toString());
-    
+  
+      
+
+
+
     </script> 
 
 
