@@ -4,35 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+     <!-- jQuery first, then Popper.js, then Bootstrap JS, Momementjs, Style.CSS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+     crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+     crossorigin="anonymous"></script>
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://momentjs.com/downloads/moment.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
 
     <style>
+      .item {
+            border: 1px solid rgb(131, 114, 114);
+            margin: 10px 0;
+      }
       .past {background : red
       }
       .present {background : green
       }
       .future {background : lightgray
       }
-
-
     </style>
   </head>
-
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
@@ -43,64 +43,59 @@
 <!-- Timeblocks for hours-->
       <div class="item" data-hour=9>
         9am
-        <input type="text">
+        <input type="text" size="122">
         <button>save</button>   
       </div>
+
       <div class="item" data-hour=10>
         10am
-        <input type="text">
+        <input type="text" size="121">
         <button>save</button>
       </div>
+
       <div class="item" data-hour=11>
         11am
-        <input type="text">
+        <input type="text" size="121">
         <button>save</button>
       </div>
+
       <div class="item" data-hour=12>
         12pm
-        <input type="text">
+        <input type="text" size="121">
         <button>save</button>
       </div>
+
       <div class="item" data-hour=13>
         1pm
-        <input type="text">
+        <input type="text" size="122">
         <button>save</button>
       </div>
+
       <div class="item" data-hour=14>
         2pm
-        <input type="text">
+        <input type="text" size="122">
         <button>save</button>
       </div>
+
       <div class="item" data-hour=15>
         3pm
-        <input type="text">
+        <input type="text" size="122">
         <button>save</button>
       </div>
+
       <div class="item" data-hour=16>
         4pm
-        <input type="text">
+        <input type="text" size="122">
         <button>save</button>
       </div>
+
       <div class="item" data-hour=17>
         5pm
-        <input type="text">
+        <input type="text" size="122">
         <button>save</button>
       </div>
+
     </div>
-    <!--scripts for JS Moment Jquery CloudFlare, and Momentjs-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-​
-​
-    <script src="https://momentjs.com/downloads/moment.js"></script>
+  <script src="app.js"></script>
   </body>
 </html>

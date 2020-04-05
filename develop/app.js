@@ -1,7 +1,7 @@
 //Test that the js is linked and working
 console.log("app.js loaded");
 // document.ready function to ensure HTML loaded first 
-$(document).ready(function(){
+$(document).ready(function() {
 
 
 
@@ -13,7 +13,7 @@ $(document).ready(function(){
 //On click save data to local storage to persist. 
 $("button").on("click", function(event){
     //value for the value of argument
-    var value = $(this).siblings("input").val().trim()
+    var value = $(this).siblings("input").val().trim();
 ​   // value for key for the argument
     var key = $(this).parent().data("hour")
 ​   //The setting to local storage of the Key value pair
@@ -46,27 +46,6 @@ $(".item").each(function(){
             }
         })
         ​
-        ​
-        ​
         })
 
 
-
-
-
-// ON REFRESH 
-// -> time blocks should populate with local storage data
-//     * retrieve data from local storage
-//     * differentiate times
-//     * display local storage data on screen
-
-//     time | activity | save button
-//     ->When we hit save, 
-//       storing the time and activity in local storage
-
-//       STARTING WITH GETTING THE CODE TO SAVE FOR ONE FIELD FIRST.
-
-//       treat local storage like its its own JS Object 
-
-
-//End of the document ready jQuery function
