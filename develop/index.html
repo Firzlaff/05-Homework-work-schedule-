@@ -29,10 +29,23 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+      <!-- Timeblocks go here I feel i should create all the blocks here for easier input forms-->
     </div>
+    <!--scripts for JS Moment Jquery CloudFlare-->
     <script href="script.js"></script>
+    <script src="Lib/moment/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  
+
+    <script type="text/javaScript">
+    //create a moment object of current day and time. 
+      const m = moment();
+      // convert the moment object to show string target the node for the day and update to reflect current info
+      $("#currentDay").text(m.toString());
+    
+    </script> 
+
+
   </body>
 </html>
