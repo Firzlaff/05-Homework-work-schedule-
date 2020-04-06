@@ -1,8 +1,8 @@
 # 05-Homework-work-schedule-
 05-Homework-work-schedule-5th Homework for Trilogy labs.
-# The Password Generator 
+# The Daily Planer
 
-## This was my third homework for my Trilogy labs week 3 Java Script. 
+## This was my 5th homework for my Trilogy labs Bootcamp/ 
 
 I was to create a a daily planner that meets the below requirements.
 
